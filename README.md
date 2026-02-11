@@ -9,7 +9,7 @@ Mejora de un sistema Web para una academia de danza el cual permite conocer los 
 
 Siguiendo el ciclo de vida de desarrollo de software (SDLC) acualmente se encuentra en fase de analisis y toma de requerimientos:
 
-1.  **[Análisis de Requisitos (en proceso) ](./ERS.md):** Definición detallada de necesidades, requerimientos funcionales y reglas de negocio.
+1.  **[Análisis de Requisitos (en proceso) ](./doc/ERS.md):** Definición detallada de necesidades, requerimientos funcionales y reglas de negocio.
 
 
 ##  Características Principales
