@@ -2,7 +2,7 @@
 ## Proyecto: E-commerce Academia de Danza Árabe
 
 ### 1. Introducción
-Este documento detalla los requisitos técnicos y funcionales para el desarrollo de una plataforma web integral para la Academia de Danza. El sistema tiene el doble propósito de profesionalizar la venta de artículos especializados (velos, crótalos, faldas, etc.) y servir como punto de contacto digital y branding para la institución.
+Este documento detalla los requirimientos para el desarrollo de una plataforma web integral para una Academia de Danza Árabe. El sistema tiene el doble propósito de profesionalizar la venta de artículos especializados (velos, crótalos, faldas, etc.) y servir como punto de contacto digital y branding para la institución.
 
 ### 2. Alcance del Sistema
 El software abarcará desde la presentación pública de la academia (Landing Page, Galería) hasta el ciclo completo de comercio electrónico (Catálogo, Carrito, Pagos, Órdenes), incluyendo un panel administrativo para la gestión de inventario ,pedidos y alumnos inscritos.
@@ -78,15 +78,22 @@ A continuación, se enlistan las funciones específicas que el sistema debe prov
 * **RF-20 Alertas Administrativas:** El sistema deberá notificar al administrador mediante correo electrónico cuando se genere una nueva orden de compra o cuando el stock de una variante de producto llegue a un nivel crítico (definido en las reglas de negocio).
 
 
-###### Sección de Login
+##### Sección de Login
+* **RF-21 Registro validado:** El administrador debe validar previamente que una alumna este inscrita en la academia directo desde el panel de administrador.
+* **RF-22 Primer login:** El primer login será con una contraseña generica que la alumna deberá modificar posteriormente.
 
-###### Requerimientos Nuevos
+##### Requerimientos Nuevos
 
-##### Registro y manejo de usuarios
+* **RF-23 Recuperación de contraseña:** Las alumnas podrán recuperar su contraseña por medio del correo electronico registrado en el sistema.
 
-* **RF-21 Usuarios para alumnas:** El sistema deberá permitirle a las alumnas de la academia crear su perfil en el sistema, con el cual podran consultar el estatus de sus compras.
+* **RF-24 Compras generales:** El sistema deberá de tener la opción de comprar sin ser alumna.
 
-* **RF-22 Compras generales:** El sistema deberá de tener la opción de comprar sin ser alumna.
+* **RF-25 Edición de foto de perfil:** El sistema debe permitir a las alumnas poder modificar su foto de perfil.
+* **RF-26 Edición de correo electronico:** El sistema debe permitir a las alumnas poder modificar su correo electronico.
+* **RF-27 Verificación de contraseña:** Todo cambio realizado en el perfil deberá ser validado con la contraseña.
+* **RF-28 Estatus de compra de alumnas:** El sistema debe permitir a las alumnas poder consultar el estatus de sus pedidos en una sección de su perfil.
+* **RF-29 Barra de navegación persistente:** El sistema debe de tener una barra de navegación persistente para acceder a las secciones del sistema.
+* **RF-30 Sesión Persistente:** El sistema deberá permitir que la sesión de la alumna o administrador permanezca activa mediante el uso de tokens seguros (JWT/Cookies), evitando que el usuario deba reautenticarse tras cerrar la pestaña del navegador, hasta que expire el tiempo de vida del token o se cierre la sesión manualmente.
 
 ### Requerimientos no funcionales
 
@@ -101,3 +108,5 @@ A continuación, se enlistan las funciones específicas que el sistema debe prov
 * **RN-01:** Debe de haber descuentos para usuarios que sean alumnas.
 * **RN-02:** Los usuarios que no sean alumnas no necesitaran crear una cuenta para comprar, su orden sera gestionada con un ID.
 * **RN-03:** El sistema NO deberá gestionar en su base de datos las transacciones de tarjetas.
+* **RN-04 Política de Devoluciones Físicas:** Debido al alcance operativo actual, toda devolución o cambio de producto deberá gestionarse de manera presencial en las instalaciones de la academia, previa presentación del ID de orden o comprobante de pago digital.
+
